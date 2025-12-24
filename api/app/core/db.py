@@ -5,5 +5,10 @@ from app.core.config import settings
 engine = create_engine(settings.database_url, pool_pre_ping=True)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
+
 class Base(DeclarativeBase):
     pass
+
+
+# Import all models here for Alembic to detect them
+from app.models.user import User, Holding  # noqa: F401, E402
