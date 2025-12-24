@@ -1,0 +1,14 @@
+[project]
+name = "networth-worker"
+version = "0.0.1"
+requires-python = ">=3.12"
+dependencies = [
+  "celery>=5.4",
+  "redis>=5.0",
+  "psycopg[binary]>=3.1",
+  "sqlalchemy>=2.0",
+  "pydantic-settings>=2.2",
+]
+
+[tool.ruff]
+line-length = 100
